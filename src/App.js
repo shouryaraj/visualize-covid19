@@ -18,12 +18,12 @@ class App extends React.Component{
   //fetch the data from An External API or perform some unique operations 
   async componentDidMount(){
     const data = await fetchData();
-
-    this.setState({data: fetchData});
+    // Setting the state of the data to the fetched data
+    this.setState({data: data});
 
   }
     render(){
-      console.log(this.state.data)
+
       return(
        <div className={styles.contianer}>
        <Cards data={this.state.data}/>
