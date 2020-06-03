@@ -7,7 +7,7 @@ import { red } from '@material-ui/core/colors';
 // Charts Functions
 const Charts = () => {
     const [dailydata, setDailyData] = useState ({});
-
+    // hooks usage
     useState (() => {
         const fetchAPI = async () => {
             setDailyData(await fetchDailyData());

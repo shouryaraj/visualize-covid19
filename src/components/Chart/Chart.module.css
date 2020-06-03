@@ -1,0 +1,7 @@
+.container {
+    display: flex;
+    justify-content: center !important;
+    width: 75% !important;
+    position: absolute;
+    left: 160px;
+}
