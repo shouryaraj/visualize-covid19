@@ -9,6 +9,7 @@ class App extends React.Component{
   // variable for the system
   state = {
      data: {},
+     country: ''
   }
 
 
@@ -22,13 +23,19 @@ class App extends React.Component{
     this.setState({data: data});
 
   }
+  handleCountryChange = async (country) => {
+    const data = await fetchData(country);
+    this.setState({data: data, country: country});
+    // fetch the data 
+    // change the data
+  }
     render(){
 
       return(
        <div className={styles.contianer}>
        <Cards data={this.state.data}/>
-       <CountryPicker />
-       <Chart />
+       <CountryPicker handleCountryChange={this.handleCountryChange} />
+       <Chart data={this.state.data} country= {this.state.country} />
        </div>
       )
     }
