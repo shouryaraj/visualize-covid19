@@ -12,10 +12,11 @@ const Charts = () => {
         const fetchAPI = async () => {
             setDailyData(await fetchDailyData());
         }
-        console.log("daily_value")
-        console.log(dailydata)
+      
         fetchAPI();
     })
+    console.log("daily_value")
+    console.log(dailydata)
     // if and else statment ':' for the else statement
     const lineChart = (
         dailydata.length
